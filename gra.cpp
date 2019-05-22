@@ -12,7 +12,19 @@ class Gra{
     Gracz Drugi;
 
     public:
-    Gra();
+    Gra(char znak, int wielkosc, int warunek, int tryb);
     ~Gra();
     void Minmax();
 };
+
+Gra::Gra(char znak, int wielkosc, int warunek, int tryb){
+    Wielkosc_planszy = wielkosc;
+    Obecny_gracz = znak;
+    Warunek_wygranej = warunek;
+    Tryb_gry = tryb;
+    Pierwszy.Ustaw_znak(znak);
+    if(znak == 'O')
+        Pierwszy.Ustaw_znak('X');
+    else
+        Drugi.Ustaw_znak('O');
+}
