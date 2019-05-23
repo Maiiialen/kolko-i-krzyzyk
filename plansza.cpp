@@ -3,10 +3,10 @@
 using namespace std;
 
 class Plansza{
-    char **Macierz;
     int wielkosc;
 
     public:
+    char **Macierz;
     Plansza(int wielkosc);
     ~Plansza();
     int Czy_wygrana();
@@ -34,10 +34,12 @@ Plansza::~Plansza(){
 }
 
 void Plansza::Wyswietlanie(){
+    cout << "_____________" << endl;
     for(int i = 0; i < wielkosc; ++i){
         for(int j = 0; j < wielkosc; ++j){
-            cout << Macierz[i][j] << " ";
+            cout << "| " << Macierz[i][j] << " ";
         }
-        cout << endl;
+        cout << "|" << endl;
+        cout << "_____________" << endl;
     }
 }
