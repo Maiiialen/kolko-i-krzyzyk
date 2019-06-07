@@ -2,6 +2,6 @@
 #include "gra.cpp"
 
 int main(){
-    Gra gra('O', 3, 3, 11);
-    gra.Rozgrywka();
+    Gra gra;        // utworzenie zmiennej gra i wywołanie konstruktora
+    gra.menu();     // otworzenie menu, skąd można rozpocząć grę
 }
